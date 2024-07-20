@@ -36,11 +36,28 @@ const descriptografia = (string) => {
   let i = 0;
 
   //criptografia
-  const ai = "ai";
-  const enter = "enter";
-  const imes = "imer";
-  const ober = "ober";
-  const ufat = "ufat";
+  let palavras = {
+    a: {
+      string: "ai",
+      existe: true,
+    },
+    e: {
+      string: "enter",
+      existe: true,
+    },
+    i: {
+      string: "imer",
+      existe: true,
+    },
+    o: {
+      string: "ober",
+      existe: true,
+    },
+    u: {
+      string: "ufat",
+      existe: true,
+    },
+  };
 
   while (i < string.length) {
     let match = true;
@@ -55,6 +72,7 @@ const descriptografia = (string) => {
     if (!match) {
       newString += string[i];
     } else {
+      newString += string[i];
     }
   }
   console.log(newString);
