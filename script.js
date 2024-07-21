@@ -35,46 +35,59 @@ const descriptografia = (string) => {
   let newString = "";
   let i = 0;
 
-  //criptografia
-  let palavras = {
-    a: {
-      string: "ai",
-      existe: true,
-    },
-    e: {
-      string: "enter",
-      existe: true,
-    },
-    i: {
-      string: "imer",
-      existe: true,
-    },
-    o: {
-      string: "ober",
-      existe: true,
-    },
-    u: {
-      string: "ufat",
-      existe: true,
-    },
-  };
-
   while (i < string.length) {
-    let match = true;
+    let palavras = {
+      a: {
+        cripto: "ai",
+        existe: true,
+      },
+      e: {
+        cripto: "enter",
+        existe: true,
+      },
+      i: {
+        cripto: "imer",
+        existe: true,
+      },
+      o: {
+        cripto: "ober",
+        existe: true,
+      },
+      u: {
+        cripto: "ufat",
+        existe: true,
+      },
+    };
+    let achei = {
+      cripto: "",
+      achado: false
+    }
+    for (let chaves in palavras) {
+      let cripto = palavras[chaves].cripto
+      let existe = palavras[chaves].existe
 
-    for (let j = 0; j < ai.length; j++) {
-      if (string[i + j] !== ai[j]) {
-        match = false;
-        break;
+      for(let j = 0; j < cripto.length; j++) {
+        if(string[i + j] !== palavras[chaves].cripto[j]) {
+          existe = false
+          break;
+        }
+      }
+      if(existe) {
+        achei.cripto = cripto
+        achei.achado = existe
+        break
       }
     }
-
-    if (!match) {
-      newString += string[i];
+    if(achei.achado) {
+      newString += string[i]
+      i += achei.cripto.length
     } else {
-      newString += string[i];
+      newString += string[i]
+      i++
     }
   }
   console.log(newString);
-};
+}
 descriptografia(criptografada);
+
+
