@@ -1,0 +1,87 @@
+@import "variables";
+@import "paterns";
+@import "reset";
+
+main {
+  padding: 4rem;
+  width: 144rem;
+  height: 102.4rem;
+
+  display: flex;
+  gap: 8rem;
+
+  background-color: $light-blue-100;
+  .logo {
+    width: 120px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+  }
+  .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-top: 12.8rem;
+    margin-bottom: 3.2rem;
+    .entrada {
+      width: 68rem;
+      height: 58.8rem;
+
+      font-size: 3.2rem;
+      line-height: 4.8rem;
+      background-color: transparent;
+      color: $dark-blue-300;
+
+      outline: none;
+      resize: none;
+      &::placeholder {
+        color: $dark-blue-300;
+      }
+    }
+    .footer {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      .info {
+        display: flex;
+        gap: 0.8rem;
+        img {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+        p {
+          font-size: 1.2rem;
+          line-height: 1.8rem;
+          color: $gray-400;
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 2.4rem;
+      }
+    }
+  }
+  .output {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    width: 40rem;
+    height: 94.4rem;
+    padding: 3.2rem;
+
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    background-color: #ffffff;
+    .saida {
+      height: 78.1rem;
+      width: 33.6rem;
+      p {
+        color: $gray-400;
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+      }
+    }
+  }
+}

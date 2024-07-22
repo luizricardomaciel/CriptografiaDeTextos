@@ -1,0 +1,39 @@
+.btn-cripto {
+  padding: 2.4rem;
+  width: 32.8rem;
+  height: 6.7rem;
+
+  background-color: $dark-blue-300;
+  border-radius: 2.4rem;
+
+  color: white;
+  line-height: 19.36px;
+
+  transition: 0.3s;
+  &:hover {
+    background-color: $dark-blue-400;
+  }
+}
+
+.btn-descripto {
+  width: 32.8rem;
+  height: 6.7rem;
+
+  border: 1px solid #0a3871;
+  border-radius: 2.4rem;
+  color: $dark-blue-300;
+
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #d8dfe8;
+  }
+}
+
+p {
+  color: $dark-blue-300;
+}
+
+.saida {
+  color: $gray-400;
+}
