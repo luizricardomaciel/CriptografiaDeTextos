@@ -1,33 +1,37 @@
-.btn-cripto {
-  padding: 2.4rem;
-  width: 32.8rem;
-  height: 6.7rem;
+@mixin btn-cripto($width, $height, $color, $background, $bgHover) {
+  width: $width;
+  height: $height;
 
-  background-color: $dark-blue-300;
+  background-color: $background;
   border-radius: 2.4rem;
+  border: 1px solid #0a3871;
 
-  color: white;
+  color: $color;
   line-height: 19.36px;
 
   transition: 0.3s;
   &:hover {
-    background-color: $dark-blue-400;
+    background-color: $bgHover;
   }
 }
 
-.btn-descripto {
-  width: 32.8rem;
-  height: 6.7rem;
-
-  border: 1px solid #0a3871;
-  border-radius: 2.4rem;
-  color: $dark-blue-300;
-
-  transition: 0.3s;
-
-  &:hover {
-    background-color: #d8dfe8;
+.buttons {
+  .btn-cripto {
+    @include btn-cripto(
+      32.8rem,
+      6.7rem,
+      #ffffff,
+      $dark-blue-300,
+      $dark-blue-400
+    );
   }
+  .btn-descripto {
+    @include btn-cripto(32.8rem, 6.7rem, $dark-blue-300, none, #d8dfe8);
+  }
+}
+
+.copiar {
+  @include btn-cripto(33.6rem, 6.7rem, $dark-blue-300, none, #d8dfe8);
 }
 
 p {

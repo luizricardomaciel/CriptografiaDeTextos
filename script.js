@@ -1,6 +1,4 @@
-let string = "eu gosto de gato de botas, assim é mais gostoso";
-const criptografada =
-  "enterufat goberstober denter gaitober denter bobertais, aissimerm é maiimers goberstobersober";
+let palavra = "";
 
 const criptografia = (string) => {
   let novaString = "";
@@ -29,9 +27,9 @@ const criptografia = (string) => {
     }
     i++;
   }
-  console.log(novaString);
+
+  return novaString;
 };
-criptografia(string);
 
 const descriptografia = (string) => {
   let newString = "";
@@ -88,6 +86,36 @@ const descriptografia = (string) => {
       i++;
     }
   }
-  console.log(newString);
+  return newString;
 };
-descriptografia(criptografada);
+
+const getText = () => {
+  const text = document.querySelector(".entrada").value;
+  const saida = document.querySelector(".saida");
+  palavra = criptografia(text);
+
+  saida.innerHTML = "<p>" + palavra + "</p>";
+};
+
+const getDescripto = () => {
+  const text = document.querySelector(".entrada").value;
+  const saida = document.querySelector(".saida");
+  palavra = descriptografia(text);
+  saida.innerHTML = "<p>" + palavra + "</p>";
+};
+
+function copyToText(button) {
+  navigator.clipboard
+    .writeText(palavra)
+    .then(function () {
+      button.textContent = "Copiado!";
+
+      setTimeout(() => {
+        button.textContent = "Copiar";
+      }, 2000);
+    })
+    .catch(function (err) {
+      console.error(`Erro ao copiar texto:`, err);
+      alert("Erro ao copiar texto. Por favor, copie manualmente.");
+    });
+}

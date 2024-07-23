@@ -1,28 +1,44 @@
-.btn-cripto {
-  padding: 2.4rem;
+.buttons .btn-cripto {
   width: 32.8rem;
   height: 6.7rem;
   background-color: #0a3871;
   border-radius: 2.4rem;
-  color: white;
+  border: 1px solid #0a3871;
+  color: #ffffff;
   line-height: 19.36px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.btn-cripto:hover {
+.buttons .btn-cripto:hover {
   background-color: #072b61;
 }
-
-.btn-descripto {
+.buttons .btn-descripto {
   width: 32.8rem;
   height: 6.7rem;
-  border: 1px solid #0a3871;
+  background-color: none;
   border-radius: 2.4rem;
+  border: 1px solid #0a3871;
   color: #0a3871;
+  line-height: 19.36px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.btn-descripto:hover {
+.buttons .btn-descripto:hover {
+  background-color: #d8dfe8;
+}
+
+.copiar {
+  width: 33.6rem;
+  height: 6.7rem;
+  background-color: none;
+  border-radius: 2.4rem;
+  border: 1px solid #0a3871;
+  color: #0a3871;
+  line-height: 19.36px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.copiar:hover {
   background-color: #d8dfe8;
 }
 
@@ -64,7 +80,7 @@ button {
 }
 
 body {
-  background-color: black;
+  background-color: #f3f5fc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,4 +207,26 @@ main .output .saida p {
   color: #495057;
   font-size: 2.4rem;
   line-height: 3.6rem;
+}
+main .output .saida .vazia {
+  margin-top: 21.1rem;
+}
+main .output .saida .vazia .sem-mensagem {
+  margin-top: 3.2rem;
+  width: 33.6rem;
+  height: 12.2rem;
+}
+main .output .saida .vazia .sem-mensagem h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  text-align: center;
+  color: #343a40;
+}
+main .output .saida .vazia .sem-mensagem p {
+  margin-top: 1.6rem;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
 }
