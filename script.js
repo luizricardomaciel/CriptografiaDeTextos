@@ -89,19 +89,28 @@ const descriptografia = (string) => {
   return newString;
 };
 
+function createButton() {
+  const output = document.querySelector(".output");
+  output.innerHTML += `<button type="button" class="copiar" onclick="copyToText(this)">
+    Copiar
+  </button>`;
+}
+
 const getText = () => {
   const text = document.querySelector(".entrada").value;
-  const saida = document.querySelector(".saida");
+  const saida = document.querySelector(".output");
   palavra = criptografia(text);
 
-  saida.innerHTML = "<p>" + palavra + "</p>";
+  saida.innerHTML = `<p class="saida">` + palavra + "</p>";
+  createButton();
 };
 
 const getDescripto = () => {
   const text = document.querySelector(".entrada").value;
-  const saida = document.querySelector(".saida");
+  const saida = document.querySelector(".output");
   palavra = descriptografia(text);
-  saida.innerHTML = "<p>" + palavra + "</p>";
+  saida.innerHTML = `<p class="saida">` + palavra + "</p>";
+  createButton();
 };
 
 function copyToText(button) {

@@ -15,23 +15,14 @@
   }
 }
 
-.buttons {
-  .btn-cripto {
-    @include btn-cripto(
-      32.8rem,
-      6.7rem,
-      #ffffff,
-      $dark-blue-300,
-      $dark-blue-400
-    );
-  }
-  .btn-descripto {
-    @include btn-cripto(32.8rem, 6.7rem, $dark-blue-300, none, #d8dfe8);
+@mixin responsive($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
   }
 }
 
 .copiar {
-  @include btn-cripto(33.6rem, 6.7rem, $dark-blue-300, none, #d8dfe8);
+  @include btn-cripto(100%, 6.7rem, $dark-blue-300, none, #d8dfe8);
 }
 
 p {

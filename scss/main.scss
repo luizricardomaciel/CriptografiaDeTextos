@@ -4,9 +4,8 @@
 
 main {
   padding: 4rem;
-  width: 144rem;
-  height: 102.4rem;
-
+  width: 100%;
+  max-width: 144rem;
   display: flex;
   gap: 8rem;
 
@@ -20,13 +19,12 @@ main {
   .input {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    margin-top: 12.8rem;
-    margin-bottom: 3.2rem;
+    width: 100%;
+    max-width: 68.8rem;
     .entrada {
-      width: 68rem;
-      height: 58.8rem;
+      width: 100%;
+      height: 68.3rem;
+      margin-top: 12.8rem;
 
       font-size: 3.2rem;
       line-height: 4.8rem;
@@ -57,54 +55,148 @@ main {
         }
       }
       .buttons {
+        width: 100%;
+        max-width: 70.4rem;
+        height: 6.7rem;
         display: flex;
         gap: 2.4rem;
+        .btn-cripto {
+          @include btn-cripto(
+            100%,
+            100%,
+            #ffffff,
+            $dark-blue-300,
+            $dark-blue-400
+          );
+        }
+        .btn-descripto {
+          @include btn-cripto(100%, 100%, $dark-blue-300, none, #d8dfe8);
+        }
       }
     }
   }
   .output {
-    display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
-
-    width: 40rem;
-    height: 94.4rem;
+    width: 100%;
+    max-width: 40rem;
     padding: 3.2rem;
 
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px #00000014;
     background-color: #ffffff;
     .saida {
-      height: 78.1rem;
-      width: 33.6rem;
+      width: 100%;
+      height: 781px;
+      margin-bottom: 3.2rem;
 
-      p {
-        color: $gray-400;
-        font-size: 2.4rem;
-        line-height: 3.6rem;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: left;
+      color: $gray-400;
+      word-wrap: break-word;
+    }
+    .vazia {
+      height: 88rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .sem-mensagem {
+        padding-top: 3.2rem;
+        h2 {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 28.8px;
+          text-align: center;
+          color: $gray-500;
+        }
+        p {
+          padding-top: 1.6rem;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: center;
+          color: $gray-400;
+        }
+      }
+    }
+  }
+  @include responsive(950px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    .logo {
+      max-width: 3.2rem;
+      align-self: baseline;
+    }
+    .input {
+      .entrada {
+        margin-top: 11.6rem;
+        height: 54.8rem;
+      }
+    }
+    .output {
+      max-width: 68.8rem;
+      margin-top: 6.4rem;
+      padding: 3.2rem;
+      img {
+        display: none;
       }
       .vazia {
-        margin-top: 21.1rem;
+        height: 6.9rem;
+        margin-top: 0;
         .sem-mensagem {
-          margin-top: 3.2rem;
-          width: 33.6rem;
-          height: 12.2rem;
-          h2 {
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 28.8px;
-            text-align: center;
-            color: $gray-500;
+          padding-top: 0;
+        }
+      }
+      .saida {
+        max-height: 18rem;
+      }
+    }
+  }
+  @include responsive(450px) {
+    padding: 1.6rem;
+    .logo {
+      width: 375px;
+      height: 96px;
+    }
+    .input {
+      align-items: center;
+      .entrada {
+        max-height: 30rem;
+        margin-top: 5.6rem;
+      }
+      .footer {
+        width: 100%;
+        max-width: 343px;
+        display: flex;
+        .info {
+          align-self: baseline;
+        }
+        .buttons {
+          flex-direction: column;
+          height: 158px;
+          .btn-cripto {
+            @include btn-cripto(
+              100%,
+              100%,
+              #ffffff,
+              $dark-blue-300,
+              $dark-blue-400
+            );
           }
-          p {
-            margin-top: 1.6rem;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            text-align: center;
+          .btn-descripto {
+            @include btn-cripto(100%, 100%, $dark-blue-300, none, #d8dfe8);
           }
         }
       }
+    }
+    .output {
+      width: 327px;
+      height: 186px;
+      padding: 3.2rem;
+
+      display: flex;
+      align-items: center;
     }
   }
 }

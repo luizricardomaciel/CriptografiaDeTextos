@@ -1,34 +1,5 @@
-.buttons .btn-cripto {
-  width: 32.8rem;
-  height: 6.7rem;
-  background-color: #0a3871;
-  border-radius: 2.4rem;
-  border: 1px solid #0a3871;
-  color: #ffffff;
-  line-height: 19.36px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.buttons .btn-cripto:hover {
-  background-color: #072b61;
-}
-.buttons .btn-descripto {
-  width: 32.8rem;
-  height: 6.7rem;
-  background-color: none;
-  border-radius: 2.4rem;
-  border: 1px solid #0a3871;
-  color: #0a3871;
-  line-height: 19.36px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.buttons .btn-descripto:hover {
-  background-color: #d8dfe8;
-}
-
 .copiar {
-  width: 33.6rem;
+  width: 100%;
   height: 6.7rem;
   background-color: none;
   border-radius: 2.4rem;
@@ -72,6 +43,7 @@ html {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 button {
@@ -94,8 +66,8 @@ body {
 
 main {
   padding: 4rem;
-  width: 144rem;
-  height: 102.4rem;
+  width: 100%;
+  max-width: 144rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,15 +92,13 @@ main .input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 12.8rem;
-  margin-bottom: 3.2rem;
+  width: 100%;
+  max-width: 68.8rem;
 }
 main .input .entrada {
-  width: 68rem;
-  height: 58.8rem;
+  width: 100%;
+  height: 68.3rem;
+  margin-top: 12.8rem;
   font-size: 3.2rem;
   line-height: 4.8rem;
   background-color: transparent;
@@ -177,22 +147,45 @@ main .input .footer .info p {
   color: #495057;
 }
 main .input .footer .buttons {
+  width: 100%;
+  max-width: 70.4rem;
+  height: 6.7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2.4rem;
 }
+main .input .footer .buttons .btn-cripto {
+  width: 100%;
+  height: 100%;
+  background-color: #0a3871;
+  border-radius: 2.4rem;
+  border: 1px solid #0a3871;
+  color: #ffffff;
+  line-height: 19.36px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+main .input .footer .buttons .btn-cripto:hover {
+  background-color: #072b61;
+}
+main .input .footer .buttons .btn-descripto {
+  width: 100%;
+  height: 100%;
+  background-color: none;
+  border-radius: 2.4rem;
+  border: 1px solid #0a3871;
+  color: #0a3871;
+  line-height: 19.36px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+main .input .footer .buttons .btn-descripto:hover {
+  background-color: #d8dfe8;
+}
 main .output {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 3.2rem;
-  width: 40rem;
-  height: 94.4rem;
+  width: 100%;
+  max-width: 40rem;
   padding: 3.2rem;
   border-radius: 32px;
   -webkit-box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.0784313725);
@@ -200,33 +193,160 @@ main .output {
   background-color: #ffffff;
 }
 main .output .saida {
-  height: 78.1rem;
-  width: 33.6rem;
-}
-main .output .saida p {
+  width: 100%;
+  height: 781px;
+  margin-bottom: 3.2rem;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: left;
   color: #495057;
-  font-size: 2.4rem;
-  line-height: 3.6rem;
+  word-wrap: break-word;
 }
-main .output .saida .vazia {
-  margin-top: 21.1rem;
+main .output .vazia {
+  height: 88rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-main .output .saida .vazia .sem-mensagem {
-  margin-top: 3.2rem;
-  width: 33.6rem;
-  height: 12.2rem;
+main .output .vazia .sem-mensagem {
+  padding-top: 3.2rem;
 }
-main .output .saida .vazia .sem-mensagem h2 {
+main .output .vazia .sem-mensagem h2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 28.8px;
   text-align: center;
   color: #343a40;
 }
-main .output .saida .vazia .sem-mensagem p {
-  margin-top: 1.6rem;
+main .output .vazia .sem-mensagem p {
+  padding-top: 1.6rem;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   text-align: center;
+  color: #495057;
+}
+@media (max-width: 950px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0;
+  }
+  main .logo {
+    max-width: 3.2rem;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+  }
+  main .input .entrada {
+    margin-top: 11.6rem;
+    height: 54.8rem;
+  }
+  main .output {
+    max-width: 68.8rem;
+    margin-top: 6.4rem;
+    padding: 3.2rem;
+  }
+  main .output img {
+    display: none;
+  }
+  main .output .vazia {
+    height: 6.9rem;
+    margin-top: 0;
+  }
+  main .output .vazia .sem-mensagem {
+    padding-top: 0;
+  }
+  main .output .saida {
+    max-height: 18rem;
+  }
+}
+@media (max-width: 450px) {
+  main {
+    padding: 1.6rem;
+  }
+  main .logo {
+    width: 375px;
+    height: 96px;
+  }
+  main .input {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .input .entrada {
+    max-height: 30rem;
+    margin-top: 5.6rem;
+  }
+  main .input .footer {
+    width: 100%;
+    max-width: 343px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .input .footer .info {
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+  }
+  main .input .footer .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 158px;
+  }
+  main .input .footer .buttons .btn-cripto {
+    width: 100%;
+    height: 100%;
+    background-color: #0a3871;
+    border-radius: 2.4rem;
+    border: 1px solid #0a3871;
+    color: #ffffff;
+    line-height: 19.36px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  main .input .footer .buttons .btn-cripto:hover {
+    background-color: #072b61;
+  }
+  main .input .footer .buttons .btn-descripto {
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    border-radius: 2.4rem;
+    border: 1px solid #0a3871;
+    color: #0a3871;
+    line-height: 19.36px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  main .input .footer .buttons .btn-descripto:hover {
+    background-color: #d8dfe8;
+  }
+  main .output {
+    width: 327px;
+    height: 186px;
+    padding: 3.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
