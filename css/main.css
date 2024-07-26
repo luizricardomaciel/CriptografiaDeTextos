@@ -339,14 +339,20 @@ main .output .vazia .sem-mensagem p {
     background-color: #d8dfe8;
   }
   main .output {
-    width: 327px;
-    height: 186px;
+    max-width: 327px;
     padding: 3.2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  main .output .vazia {
+    height: 100%;
   }
 }
