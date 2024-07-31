@@ -29,10 +29,24 @@ As "chaves" de criptografia utilizadas são:
 
 A interface possui campos para inserção de texto que será criptografado ou descriptografado. O usuário pode escolher entre as duas opções, e o resultado será exibido na tela.
 
-## Como Usar
+### Como Usar
 
-1. Insira o texto no campo apropriado.
-2. Escolha se deseja criptografar ou descriptografar o texto.
-3. O resultado será exibido na tela.
+Este projeto é uma aplicação web que permite criptografar e descriptografar texto. Siga as instruções abaixo para configurar e executar o projeto.
+
+### Requisitos
+
+Antes de começar, certifique-se de que você tem o [Node.js](https://nodejs.org/) instalado em sua máquina. O Node.js inclui o npm (Node Package Manager), que é necessário para instalar as dependências do projeto.
+
+1. **Baixe e instale o Node.js:**
+   - Acesse [nodejs.org](https://nodejs.org/).
+   - Faça o download da versão recomendada para a maioria dos usuários.
+   - Siga as instruções de instalação para o seu sistema operacional.
+
+### Configuração
+
+1. **Clone o repositório do GitHub:**
+   ```bash
+   git clone https://github.com/luizricardomaciel/CriptografiaDeTextos.git
+   cd seu-repositorio
 
 Este programa é uma maneira simples e divertida de praticar criptografia básica e pode ser expandido para incluir mais funcionalidades no futuro.
