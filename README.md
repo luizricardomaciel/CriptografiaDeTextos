@@ -8,11 +8,11 @@ Este programa criptografa e descriptografa textos utilizando um conjunto especí
 
 As "chaves" de criptografia utilizadas são:
 
-- A letra "e" é convertida para "enter"
-- A letra "i" é convertida para "imes"
-- A letra "a" é convertida para "ai"
-- A letra "o" é convertida para "ober"
-- A letra "u" é convertida para "ufat"
+- A letra **"e"** é convertida para **"enter"**
+- A letra **"i"** é convertida para **"imes"**
+- A letra **"a"** é convertida para **"ai"**
+- A letra **"o"** é convertida para **"ober"**
+- A letra **"u"** é convertida para **"ufat"**
 
 ### Regras
 
@@ -20,16 +20,16 @@ As "chaves" de criptografia utilizadas são:
 - Não são utilizadas letras com acentos nem caracteres especiais.
 - O programa permite converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original.
 
-### Exemplo
+### Exemplos
 
-- A palavra "gato" é criptografada como "gaitober".
-- A palavra "gaitober" é descriptografada como "gato".
+- A palavra **"gato"** é criptografada como **"gaitober"**.
+- A palavra **"gaitober"** é descriptografada como **"gato"**.
 
 ## Interface do Usuário
 
 A interface possui campos para inserção de texto que será criptografado ou descriptografado. O usuário pode escolher entre as duas opções, e o resultado será exibido na tela.
 
-### Como Usar
+## Como Usar
 
 Este projeto é uma aplicação web que permite criptografar e descriptografar texto. Siga as instruções abaixo para configurar e executar o projeto.
 
@@ -47,6 +47,4 @@ Antes de começar, certifique-se de que você tem o [Node.js](https://nodejs.org
 1. **Clone o repositório do GitHub:**
    ```bash
    git clone https://github.com/luizricardomaciel/CriptografiaDeTextos.git
-   cd seu-repositorio
-
-Este programa é uma maneira simples e divertida de praticar criptografia básica e pode ser expandido para incluir mais funcionalidades no futuro.
+   cd CriptografiaDeTextos
